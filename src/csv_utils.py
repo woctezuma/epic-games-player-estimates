@@ -4,5 +4,5 @@ def export_to_csv(data, fname, headers=[], fields=[]):
             line = ','.join(headers)
             f.write(f"{line}\n")
         for entry in data:
-            line = ','.join(entry[k] for k in fields)
+            line = ','.join(str(entry[k]) for k in fields)
             f.write(f"{line}\n")
