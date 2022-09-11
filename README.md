@@ -1,6 +1,6 @@
 # Epic Games Player Estimates
 
-This repository contains Python code to estimate the number of players on the Epic Games store (EGS).
+This repository contains Python code to correlate the numbers of players and ratings on the Epic Games store (EGS).
 
 ## Requirements
 
