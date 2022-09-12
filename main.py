@@ -9,6 +9,10 @@ def main():
     sandbox_ids_dict = load_sandbox_ids_dict()
 
     achievement_data = remove_broken_achievements(achievement_data)
+
+    sandbox_ids_for_tracker = {k: v for k, v in sandbox_ids_dict.items() if v in achievement_data}
+    save_json(sandbox_ids_for_tracker, 'data/sandbox_ids_for_tracker.json')
+
     sandbox_ids = intersect_sandbox_ids(achievement_data, game_rating_data)
 
     trimmed_sandbox_ids = {k: v for k, v in sandbox_ids_dict.items() if v in sandbox_ids}
