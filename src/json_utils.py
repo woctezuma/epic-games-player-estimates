@@ -10,6 +10,6 @@ def load_json(fname):
 def save_json(data, fname, prettify=True):
     with open(fname, 'w', encoding='utf8') as f:
         if prettify:
-            json.dump(data, f, indent=2)
+            json.dump(data, f, indent=4)
         else:
             json.dump(data, f)
