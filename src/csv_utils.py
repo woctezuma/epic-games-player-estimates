@@ -1,8 +1,17 @@
+def to_csv_row(values):
+    return ','.join(str(v) for v in values)
+
+
+def write_as_csv_row(values, f):
+    line = to_csv_row(values)
+    if len(line) > 0:
+        f.write(f"{line}\n")
+    return
+
+
 def export_to_csv(data, fname, headers=[], fields=[]):
     with open(fname, "w", encoding="utf8") as f:
-        if len(headers) > 0:
-            line = ','.join(headers)
-            f.write(f"{line}\n")
+        write_as_csv_row(headers, f)
         for entry in data:
-            line = ','.join(str(entry[k]) for k in fields)
-            f.write(f"{line}\n")
+            values = [entry[k] for k in fields]
+            write_as_csv_row(values, f)
