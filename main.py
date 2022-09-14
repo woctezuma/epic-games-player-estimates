@@ -9,7 +9,7 @@ def main():
 
     achievement_data = remove_broken_achievements(achievement_data)
 
-    sandbox_ids = intersect_sandbox_ids(achievement_data, game_rating_data)
+    achievement_data = intersect_sandbox_ids(achievement_data, game_rating_data)
 
     return
 

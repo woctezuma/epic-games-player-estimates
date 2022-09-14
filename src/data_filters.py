@@ -14,8 +14,8 @@ def remove_broken_achievements(achievement_data, verbose=True):
 
 
 def intersect_sandbox_ids(achievement_data, game_rating_data, verbose=True):
-    sandbox_ids = set(achievement_data.keys()).intersection(game_rating_data.keys())
+    filtered_data = {k: v for k, v in achievement_data.items() if k in game_rating_data}
     if verbose:
-        print(f'#products = {len(sandbox_ids)} after intersection with ratings')
+        print(f'#products = {len(filtered_data)} after intersection with ratings')
 
-    return sandbox_ids
+    return filtered_data
