@@ -1,11 +1,9 @@
-def list_rarity_for_all_achievements(product_data):
-    achievements = product_data['achievements']
-    rarity_list = [e['achievement']['rarity']['percent'] for e in achievements]
-    return rarity_list
+def list_all_unlock_percentages(achievement_data):
+    return [e['achievement']['rarity']['percent'] for e in achievement_data['achievements']]
 
 
 def unlocks_achievements(product_data):
-    rarity_list = list_rarity_for_all_achievements(product_data)
+    rarity_list = list_all_unlock_percentages(product_data)
     return len(rarity_list) > 0 and max(rarity_list) > 0
 
 
