@@ -13,6 +13,7 @@ pip install -r requirements.txt
 
 ## References
 
+- [`woctezuma/epic-games-tracker`][epic-games-tracker]
 - [`woctezuma/epic-games-ratings`][epic-games-ratings]
 - [`woctezuma/epic-games-achievements`][epic-games-achievements]
 
@@ -22,3 +23,4 @@ pip install -r requirements.txt
 [python-download-url]: <https://www.python.org/downloads/>
 [epic-games-ratings]: <https://github.com/woctezuma/epic-games-ratings>
 [epic-games-achievements]: <https://github.com/woctezuma/epic-games-achievements>
+[epic-games-tracker]: <https://github.com/woctezuma/epic-games-tracker>
