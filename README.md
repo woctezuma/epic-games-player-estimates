@@ -2,6 +2,8 @@
 
 This repository contains Python code to correlate the numbers of players and ratings on the Epic Games store (EGS).
 
+![Illustration cover][img-cover]
+
 ## Requirements
 
 -   Install the latest version of [Python 3.X][python-download-url].
